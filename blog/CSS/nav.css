@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+
+.navlinks {
+    list-style-type: none;
+    background-color: whitesmoke;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-weight: bold;
+}
+
+.navlink > a {
+    display: block;
+    text-decoration: none;
+    color: cornflowerblue;
+    padding: 5px;
+}
+
+.navlink > a:hover {
+    background-color: lightgray;
+}

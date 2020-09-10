@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    background-color: lightgray;
+}
+
+#root {
+    background-color: cornflowerblue;
+    color: white;
+    width: 960px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 10px;
+    box-shadow: 0 5px 20px gray;
+    box-sizing: border-box;
+}
+
+#blog-list {
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+#blogs {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+#blog > a {
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+    color: white;
+}
+
+#blog > a:hover {
+    background-color: white;
+    color: cornflowerblue;
+}

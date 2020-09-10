@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    background-color: cornflowerblue;
+    color: white;
+    font-family: sans-serif;
+}
+
+header {
+    padding: 20px 10px;
+}
+
+header > p {
+    margin: 0;
+}
+
+#title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#text {
+    padding: 10px;
+}

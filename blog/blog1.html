@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="page description">
+    <link rel="stylesheet" href="CSS/blog1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <title>Blog 1: 09/09/2020</title>
+</head>
+
+<body>
+
+    <!-- navigation bar -->
+    <div id="nav"></div>
+    <script>
+        $("#nav").load("nav.html");
+    </script>
+
+    <header>
+        <p id="title">Blog 1</p>
+        <p id="date">September 9, 2020</p>
+    </header>
+
+    <div id="text">
+        <p>
+            Under the guidance and help of five lectures, four labs, and a lot of google searches, I think I've learned
+            a good amount about HTML and CSS basics. A few things I've learned about so far are:
+        <ul>
+            <li>flex box</li>
+            <li>box model</li>
+            <li>sizing</li>
+            <li>alignment</li>
+        </ul>
+        Flex boxes and box models were completely new to me and after learning about both, I
+        can see how useful they are. They enable us to place components on the page in certain places without having to
+        use a rigid structure like a grid or table. I also didn't know about vh, vw, and em for sizing before. I had
+        only ever used px for css sizes and lengths. I didn't know there were so many types of alignments as well, such
+        as space-between, flex-start, flex-end, baseline, etc.
+        </p>
+        <p>
+            I also recently learned about navigation bars in this class and wanted to make one for this blog site so I
+            can easily go back to the main blog list. However, I knew that this code would be repeated across all the
+            pages I make and so I looked up a way to make it so I don't have so much repeated code. I was able to make
+            the navagation bar in a seperate html file. Then, I called and loaded it on the page using javascript. I'm
+            not too sure if this is the best way to do this implementation, but as I learn more from this class, I'll
+            most likely be able to replace it with something more efficent.
+        </p>
+        <p>
+            Another thing I re-created from the lectures
+            is the monocolumn. This is shown on the blog's index html page. I wanted the box-shadow on the sides of the
+            column but not on the top and bottom. I wasn't sure how to fix that though.
+        </p>
+    </div>
+
+</body>
+
+</html>
