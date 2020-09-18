@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    background-color: cornflowerblue;
+    color: white;
+    font-family: sans-serif;
+}
+
+header {
+    padding: 20px 10px;
+}
+
+header > p {
+    margin: 0;
+}
+
+#title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#text {
+    padding: 10px;
+}
+
+#notice {
+    background-color: lightgreen;
+    color: white;
+    font-family: sans-serif;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#notice:hover {
+    transition: background-color 1s ease-in;
+    background-color: lightpink;
+}
+
+#close-button {
+    color: black;
+    cursor: pointer;
+}

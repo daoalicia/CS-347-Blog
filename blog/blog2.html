@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="page description">
+    <link rel="stylesheet" href="CSS/blog2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <title>Blog 2: 09/18/2020</title>
+</head>
+
+<body>
+
+    <!-- navigation bar -->
+    <div id="nav"></div>
+    <script>
+        $("#nav").load("nav.html");
+    </script>
+
+    <header>
+        <p id="title">Blog 2</p>
+        <p id="date">September 18, 2020</p>
+    </header>
+
+    <div id="text">
+        <p>
+            During this week's lectures and labs, I learned more about flexboxes and their sizing. We used flex-grow for
+            expansions and flex-basis for sizing the flex-children. I also learned how positioning works. There's
+            relative positioning, fixed positioning, and absolute positioning (which we're learning next week).
+            Positioning has been shown to be useful for anchoring components such as notices on sites or health guages
+            for games.
+            <br>
+            Some example code of using a notice with fixed positioning that also appears on this blog post:
+            <br>
+        <pre>
+                <code>
+                    &lt;style&gt;
+                        #notice {
+                            background-color: lightgreen;
+                            color: white;
+                            font-size: 1.5em;
+                            font-family: sans-serif;
+                            padding: 10px;
+                            position: fixed;
+                            bottom: 0;
+                            right: 0;
+                            margin: 10px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: flex-start;
+                        }
+
+                        #notice:hover {
+                            transition: background-color 0.5s ease-in;
+                            background-color: lightpink;
+                        }
+
+                        #close-button {
+                            color: black;
+                            cursor: pointer;
+                        }
+                    &lt;/style&gt;
+                    &lt;div id="notice"&gt;
+                        Hover to shift color and click on the 'x' to close.
+                        &lt;span id="close-button"&gt;&amp;#x2716;&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;script&gt;
+                        const notice = document.getElementById('notice');
+                        const closeButton = document.getElementById('close-button');
+
+                        closeButton.addEventListener('click', () => {
+                            notice.style.display = 'none';
+                        });
+                    &lt;/script&gt;
+                </code>
+            </pre>
+        </p>
+        <p>
+            This week, I also read two short articles (
+            <a href="https://www.hiddenbrains.com/blog/angular-vs-reactjs.html" alt="source one" target="_blank">source
+                1</a>
+            ,
+            <a href="https://wiredelta.com/angularjs-vs-reactjs-vs-vuejs/" alt="source two" target="_blank">source 2</a>
+            ) on the differences between AngularJS, ReactJS, and VueJS. Over the summer, I had a software engineering
+            internship and was able to learn a bit about AngularJS/Angular 2. I know that we will be learning ReactJS
+            this upcoming semester and I was curious about the similarities and differences between the two. Both use
+            and support JavaScript, HTML5, and CSS3. One main difference between them is that AngularJS is a framework
+            and ReactJS is library. Another difference is that ReactJS uses Virtual Document Object Model (DOM), which
+            increases speed and only updates areas where changes have occurred, and
+            AngularJS uses Real DOM, which automatically updates the entire tree when you make a change to a single data
+            structure. AngularJS was developed by Google and ReactJS was developed by Facebook.
+        </p>
+    </div>
+
+    <div id="notice">
+        Hover to shift color and click on the 'x' to close.
+        <span id="close-button">&#x2716;</span>
+    </div>
+
+    <script>
+        const notice = document.getElementById('notice');
+        const closeButton = document.getElementById('close-button');
+
+        closeButton.addEventListener('click', () => {
+            notice.style.display = 'none';
+        });
+    </script>
+
+</body>
+
+</html>
