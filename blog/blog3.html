@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="page description">
+    <link rel="stylesheet" href="CSS/blog3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script defer src="JS/nav.js"></script>
+    <title>Blog 3: 09/24/2020</title>
+</head>
+
+<body>
+
+    <!-- navigation bar -->
+    <div id="nav"></div>
+
+    <header>
+        <p id="title">Blog 3</p>
+        <p id="date">September 24, 2020</p>
+    </header>
+
+    <div id="text">
+        <p>
+            This week, we learned about aboslute positioning. When an element is positioned absoutely, it anchors itself
+            to the nearest ancestor that has non-static positioning. Since the default positioning for elements is
+            static, this means that we have to set the parent element that we want the child to anchor to with relative
+            positioning instead. Another cool thing we learned this week was how to mimic powerpoint slides and their
+            transitions in lab 7/8.My group struggled with the transitions but after seeing the solution, we saw that we
+            overthought it and
+            made it much more complicated than needed. Part of the error was because we were trying to use transition
+            instead of transform.
+        </p>
+        <p>
+            I was interested in finding other ways to use absolute positioning on a web page, so I looked up other
+            examples and came across this <a href="https://www.youtube.com/watch?v=lUaw-AA9HnA&ab_channel=KevinPowell"
+                alt="link to YouTube video" target="_blank">YouTube video</a> tutorial on practical examples for this
+            positioning. Not only was it very helpful with making me understand positioning better, but I got to learn
+            some new things about CSS such as calc and rem. I have a better understanding of how to use rem and em now
+            after watching his tutorial.
+            <br>
+            Some example CSS code used in the video that I slightly altered and recreated while watching the video is
+            shown below and also appears embedded on
+            this blog post:
+            <br>
+        <pre>
+                <code>
+                    .card {
+                        position: relative;
+                        width: 40%;
+                        margin: 10px;
+                        box-shadow: 0 0 25px 0 rgba(0, 0, 0, .35);
+                    }
+                    
+                    .card::before,
+                    .card::after {
+                        content: '';
+                        position: absolute;
+                        border: 1px solid white;
+                    }
+                    
+                    .card::before {
+                        top: 1.5rem;
+                        bottom: 1.5rem;
+                        right: 1.5rem;
+                    }
+                    
+                    .card::after {
+                        bottom: 1.5rem;
+                        left: 1.5rem;
+                        right: 1.5rem;
+                    }
+                    
+                    .card-img {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        /* pushes it behind */
+                        z-index: -1;
+                    }
+                    
+                    .card-body {
+                        background: rgba(0, 0, 0, .5);
+                        color: white;
+                        padding: 3rem;
+                    }
+                    
+                    .card-title,
+                    .card-text {
+                        margin: 0;
+                    
+                    }
+                    
+                    .card-title {
+                        font-size: 3rem;
+                        line-height: 1;
+                        margin-bottom: .5em;
+                        position: relative;
+                        /* pulling card title forward and on its own layer */
+                        z-index: 1;
+                        color: black;
+                    }
+                    
+                    .card-title::before {
+                        content: '';
+                        position: absolute;
+                        background: yellow;
+                        /* 100% of the card title width plus an additional 5rem to compensate for the excess 5rem from left */
+                        width: calc(100% + 5rem);
+                        top: -0.1em;
+                        bottom: -0.15em;
+                        left: -5rem;
+                        z-index: -1;
+                        /* only want the shadow on the right side */
+                        box-shadow: inset -15px 0 10px -10px rgba(0, 0, 0, .5);
+                    }
+                    
+                    .card-title::after {
+                        content: '';
+                        position: absolute;
+                        top: -0.1em;
+                        bottom: -0.15em;
+                        left: calc(100% + 3rem);
+                        width: 2rem;
+                        background: yellow;
+                        box-shadow: inset 12px 0 10px -10px rgba(0, 0, 0, .5);
+                    }
+                    
+                    .card-text {
+                        text-align: right;
+                    }
+                </code>
+            </pre>
+        </p>
+    </div>
+
+    <div class="card-div">
+        <div class="card">
+            <img src="//unsplash.it/705/705" alt="" class="card-img">
+            <div class="card-body">
+                <h3 class="card-title">This is a card</h3>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, quisquam.
+                    Mollitia
+                    sed aliquid architecto hic.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
