@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/blog5.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script defer src="JS/nav.js"></script>
+    <script defer src="JS/blog5.js"></script>
+    <title>Blog 5: 10/08/2020</title>
+</head>
+
+<body>
+
+    <!-- navigation bar -->
+    <div id="nav"></div>
+
+    <header>
+        <p id="title">Blog 5</p>
+        <p id="date">October 08, 2020</p>
+    </header>
+
+    <div id="text">
+        <p>
+            This week in class we more about JavaScript and its components/objects. It was originally meant to be a
+            client and server language. Today, it has become a scripting language used to create and control dynamic
+            website content. There are three keywords to declare variables in JS. They are let, var, and const. The var
+            statement declares a function-scoped or globally-scoped variable. The let statement declares a block-scoped
+            local variable, meaning the variable cannot be accessed from outside the block. The const statement requires
+            the variable to be assigned a value when declared and cannot be reassigned. However out of these three, we
+            will only be using let and const because var is outdated and buggy. Some other new things I learned about
+            were spread syntax and optional chaining. We also learned about alerts which is similar to a pop up on a
+            webpage and so I have a code example of an alert in JavaScript that's also being used on this blog page. The
+            alert appears when the user has entered their name and clicked submit.
+        </p>
+        <p>
+        <pre>
+                <code>
+                    const submitButton = document.getElementById('submit');
+                    const name = document.getElementById('name');
+
+                    submitButton.addEventListener('click', () => {
+                        alert(`Hello ${name.value}!`);
+                    });
+                </code>
+            </pre>
+        </p>
+        <p>
+            Outside of class, I wanted to learn more about Bootstrap and WordPress. I had briefly learned Bootstrap on
+            my own last semester to challenge myself and use it on a database class project. I haven't used WordPress at
+            all, but I know it's quite popular in web development too. Somehow I passed the LinkedIn Assessment for it
+            even
+            though I've never used it, so I wanted to learn more about it. From <a
+                href="https://medium.com/@saschathattil/wordpress-vs-bootstrap-what-to-use-for-building-a-website-3253d4759376">this
+                article</a>, I was able to learn more about the two and their differences as well as when it would be
+            best to use them. Bootstrap is a CSS framework to aid in
+            building websites and focuses on design. Bootstrap does not have that much overhead or a huge number of
+            functionalities. It also loads faster than WordPress. WordPress is a content management system and focuses
+            more on
+            backend functionalities. It's possible to use both of them together.
+        </p>
+    </div>
+
+    <div id="form">
+        <label for="name">name</label>
+        <input type="text" id="name" autocomplete="off">
+        <button id="submit">submit</button>
+    </div>
+
+</body>
+
+</html>
