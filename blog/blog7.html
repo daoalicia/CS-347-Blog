@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/blog7.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script defer src="JS/nav.js"></script>
+    <title>Blog 7: 10/29/2020</title>
+</head>
+
+<body>
+
+    <!-- navigation bar -->
+    <div id="nav"></div>
+
+    <header>
+        <p id="title">Blog 7</p>
+        <p id="date">November 5, 2020</p>
+    </header>
+
+    <div id="text">
+        <p>
+            This week in class we learned a bit more about Express and React and as well as an introduction to Redux.
+            Redux helps in situations where you have prop drilling, which is when a parent receives data that it doesn't
+            need and passes it on. There are three basic ideas about Redux: the data store, actions, and a reducer. The
+            data store is like a global collection of our data that's owned at the root level. If a child wants to make
+            changes to the data store, it can trigger actions which allows it to do so without having to pass back
+            through the parent. The reducer is a function that takes in two parameters, the old state and an action, and
+            it gives back the new state. State changes have to be applied to the data store that Redux manages and this
+            is done by through a function called dispatch. It takes in one parameter which is an action object with two
+            keys: type (string) and payload (data associated with action).
+        </p>
+        <p>
+            To learn more about why we should use React Redux and how it's currently used in the real world, I looked at
+            the react-redux website and found this <a href="https://react-redux.js.org/introduction/why-use-react-redux"
+                target="_blank">article</a>. Redux isn't limited to just React because it's a standalone library. This
+            means it can also be used with any other UI layer or framework. To do this, you can use a UI binding library
+            to tie the two together. This makes it easier for developers to incorporate it into their desired UI
+            framework. Redux was originally designed and intended for use with React though. This makes React Redux
+            consistently up-to-date with API changes and ensures that React components act as expected. Redux also makes
+            states predictable because "if the same state and action are passed to a reducer, the same result is always
+            produced because reducers are pure functions"(<a
+                href="https://blog.logrocket.com/why-use-redux-reasons-with-clear-examples-d21bffd5835/"
+                target="_blank">source</a>). Another reason is that Redux can be used for server-side rendering and
+            debugging is easier through action and state logging.
+        </p>
+    </div>
+
+</body>
+
+</html>
